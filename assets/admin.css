@@ -1,0 +1,35 @@
+/* Blissful Butterfly — Admin Dashboard styles (pink / girly theme) */
+.admin{position:fixed;inset:0;background:linear-gradient(180deg,#ffd6e3,#ffe4ee);z-index:200;overflow:auto}
+.admin-head{position:sticky;top:0;background:linear-gradient(90deg,#d15a75,#e87a90);color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;z-index:5}
+.admin-head b{font-size:19px}
+.admin-head .btn.ghost{background:#fff;color:var(--ink);border:0}
+.admin-tabs{display:flex;gap:8px;padding:14px 20px;flex-wrap:wrap;background:rgba(255,255,255,.7);border-bottom:3px solid var(--pink);position:sticky;top:52px;z-index:4}
+.admin-tabs button{border:2px solid var(--pink);background:#fff;border-radius:999px;padding:9px 15px;font-weight:800;font-size:13px}
+.admin-tabs button.active{background:var(--pink-d);color:#fff;border-color:var(--pink-d)}
+.admin-body{padding:20px;max-width:1200px;margin:0 auto}
+.admin-login-card{background:#fff;border:3px solid var(--pink);border-radius:20px;padding:22px;width:min(430px,94vw);margin:40px auto 0}
+.admin-login-card input{width:100%;padding:12px;margin:8px 0;border:2px solid var(--line);border-radius:12px;font:inherit}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.stat-card{background:#fff;border:3px solid var(--line);border-radius:18px;padding:18px}
+.stat-card b{font-size:26px;color:var(--pink-d);display:block}
+.stat-card span{color:var(--muted);font-size:13px;font-weight:700}
+.admin-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}
+.admin-table th,.admin-table td{padding:11px;border-bottom:1px solid #ffe4ee;text-align:left;font-size:14px;vertical-align:top}
+.admin-table th{background:#fff0f4;color:var(--pink-d);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+.admin-card{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+.admin-card h3{color:var(--pink-d);margin-bottom:8px}
+.badge-status{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.badge-status.Placed{background:#fff3cd;color:#856404}
+.badge-status.Confirmed,.badge-status.Packed{background:#d7f0dd;color:#14532d}
+.badge-status.Shipped,.badge-status.Ready{background:#cce5ff;color:#004085}
+.badge-status.Completed,.badge-status.Paid{background:#ffd6e3;color:#7a2f4a}
+.badge-status.Cancelled{background:#f8d7da;color:#721c24}
+.admin-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.admin-row select,.admin-row input{padding:9px;border:2px solid var(--line);border-radius:10px;font:inherit}
+.small-btn{background:var(--ink);color:#fff;border:0;border-radius:10px;padding:8px 12px;font-weight:800;font-size:12px}
+.small-btn.pink{background:var(--pink-d)}
+.small-btn.green{background:#25D366}
+.small-btn.ghost{background:#fff;color:var(--pink-d);border:2px solid var(--pink)}
+@media(max-width:900px){.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.stat-grid{grid-template-columns:1fr}}
+@media print{ header,footer,.admin-head,.admin-tabs,.butterflies{display:none!important} .admin{position:static} }

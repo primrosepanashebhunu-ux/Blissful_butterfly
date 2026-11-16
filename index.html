@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blissful Butterfly — For All Your Girly Girls Items</title>
+  <meta name="description" content="For all your girly girls items — Stanley cups, room decor and gift hampers at Blissful Butterfly. Pay when you collect in town, or we deliver to you out of town." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/admin.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦋</text></svg>">
+</head>
+<body>
+
+<!-- Pink Butterfly Animations (float across every page) -->
+<div class="butterflies" aria-hidden="true">
+  <span class="butterfly b1">🦋</span>
+  <span class="butterfly b2">🦋</span>
+  <span class="butterfly b3">🦋</span>
+  <span class="butterfly b4">🦋</span>
+  <span class="butterfly b5">🦋</span>
+  <span class="butterfly b6">🦋</span>
+  <span class="butterfly b7">🦋</span>
+</div>
+
+<!-- Announcement -->
+<div class="announce">🦋 <b>FOR ALL YOUR GIRLY GIRLS ITEMS</b> 🦋 &nbsp;•&nbsp; No online payment — Pay when you collect in town, or admin delivers to you out of town 🎀</div>
+
+<!-- Header -->
+<header id="header">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a href="#" class="brand" onclick="showView('shop');return false;">
+    <span class="brand-icon">🦋</span>
+    <span class="brand-text"><span>Blissful</span> Butterfly</span>
+  </a>
+  <nav id="nav">
+    <a href="#shop" onclick="showView('shop')">Shop</a>
+    <a href="#categories" onclick="showView('shop')">Categories</a>
+    <a href="#builder" onclick="showView('shop')">Gift Hampers</a>
+    <a href="#about" onclick="showView('shop')">About</a>
+    <a href="#" onclick="showView('track');return false;">Track Order</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+    <button class="icon-btn" id="wishBtn" aria-label="Wishlist">♡ <span class="badge hidden" id="wishCount">0</span></button>
+    <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">🛒 <span class="badge" id="cartCount">0</span></button>
+    <button class="btn primary" id="adminBtn" onclick="openAdminLogin()" style="padding:8px 14px;font-size:13px">🦋 Admin</button>
+  </div>
+  <div class="search-row hidden" id="searchRow">
+    <input id="searchInput" type="search" placeholder="Search Stanley cups, decor, hampers..." />
+    <button onclick="applySearch()">Search</button>
+  </div>
+  <div id="syncBanner" class="sync-banner hidden"></div>
+</header>
+<!-- Security: no-JS fallback + hidden honeypot are in checkout form below -->
+
+<!-- ============ SHOP VIEW ============ -->
+<main id="view-shop">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">🦋 Small-Business • Curated With Love</span>
+      <div class="girly-banner"><span class="butterfly-inline">🦋</span> FOR ALL YOUR GIRLY GIRLS ITEMS <span class="butterfly-inline">🦋</span></div>
+      <h1>Beautiful things for <em>your space</em> &amp; the people you love.</h1>
+      <p>Stanley cups for your everyday hydration, room decor that feels like a hug, and gift hampers made to make someone smile. <b>Order now, pay when you collect in town — or let admin deliver to you if you're out of town!</b></p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn primary">Shop Now →</a>
+        <a href="#builder" class="btn ghost">Build a Hamper 🎁</a>
+      </div>
+      <div class="pay-note">💖 <b>NO ONLINE PAYMENT NEEDED</b> — Pay on Collection (In Town) or Pay on Delivery (Out of Town)</div>
+      <div class="hero-stats">
+        <div><strong>2k+</strong><span>Happy customers</span></div>
+        <div><strong>4.9★</strong><span>Average rating</span></div>
+        <div><strong>24h</strong><span>Dispatch time</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card main">
+        <img src="assets/catalogue-1.jpg" alt="Blissful Butterfly 40oz tumbler" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80&auto=format&fit=crop'" />
+        <span class="price-tag">Stanley Cups • from $8 🦋</span>
+      </div>
+      <div class="hero-card small top"><img src="assets/catalogue-3.jpg" alt="14oz tumbler" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&q=80&auto=format&fit=crop'"/><span>14oz Tumblers</span></div>
+      <div class="hero-card small bottom"><img src="assets/catalogue-2.jpg" alt="18oz flask" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=80&auto=format&fit=crop'"/><span>18oz Flasks</span></div>
+      <div class="float-badge">🦋 Best Seller<br><b>40oz Tumbler $15</b></div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust">
+    <div>💵 <b>Pay on Collection</b><span>In town — pay when you collect</span></div>
+    <div>🚚 <b>Admin Delivery</b><span>Out of town — we deliver, pay on delivery</span></div>
+    <div>💖 <b>Quality Checked</b><span>Every item inspected by hand</span></div>
+    <div>↩️ <b>Easy Returns</b><span>7-day hassle-free returns</span></div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories" class="section">
+    <div class="section-head"><div><span class="eyebrow">Shop by Category</span><h2>What are you looking for?</h2></div><a class="link" href="#shop">View all →</a></div>
+    <div class="cat-grid" id="catGrid"></div>
+  </section>
+
+  <!-- Shop -->
+  <section id="shop" class="section shop-section">
+    <div class="section-head wrap">
+      <div><span class="eyebrow">Our Collection</span><h2 id="shopTitle">All Products</h2></div>
+      <p id="resultCount"></p>
+    </div>
+    <div class="filters">
+      <div class="pills" id="pills">
+        <button class="pill active" data-cat="all">All</button>
+        <button class="pill" data-cat="stanley">🥤 Stanley Cups</button>
+        <button class="pill" data-cat="decor">🏠 Room Decor</button>
+        <button class="pill" data-cat="hampers">🎁 Gift Hampers</button>
+      </div>
+      <select id="sortSel" onchange="renderProducts()">
+        <option value="featured">Featured</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+    <p class="empty hidden" id="emptyState">No products found. Try a different search or category.</p>
+  </section>
+
+  <!-- Hamper Builder Banner -->
+  <section id="builder" class="builder">
+    <div class="builder-copy">
+      <span class="eyebrow light">🎁 Gift Hamper Builder</span>
+      <h2>Not sure what to gift?<br>Let us curate it for you.</h2>
+      <p>Pick an occasion and a budget — we’ll suggest the perfect hamper. Or shop our ready-made bestsellers below. Pay when you collect or on delivery!</p>
+      <div class="builder-actions">
+        <button class="btn primary" onclick="filterCat('hampers')">Shop Hampers</button>
+        <button class="btn outline-light" onclick="openQuiz()">Get a Recommendation ✨</button>
+      </div>
+    </div>
+    <div class="builder-grid">
+      <button onclick="filterCat('hampers')"><span>🎂</span><b>Birthday</b><small>from $55</small></button>
+      <button onclick="filterCat('hampers')"><span>🧖‍♀️</span><b>Self-Care</b><small>from $78</small></button>
+      <button onclick="filterCat('hampers')"><span>💍</span><b>Just Because</b><small>from $65</small></button>
+      <button onclick="filterCat('hampers')"><span>👑</span><b>Luxury</b><small>from $110</small></button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div>
+      <span class="eyebrow">About Blissful Butterfly</span>
+      <h2>A small shop with a big heart.</h2>
+      <p>We started Blissful Butterfly to sell everyday essentials — Stanley cups — and to help you gift beautifully. Every hamper is hand-packed, every decor piece is chosen to make your room feel warm and yours, and every order is packed with care.</p>
+      <ul>
+        <li>✅ Genuine products, quality-checked</li>
+        <li>✅ Hand-packed hampers with a free gift note</li>
+        <li>✅ No online payment — pay on collection in town or on delivery</li>
+        <li>✅ Friendly support on WhatsApp &amp; Instagram</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format&fit=crop" alt="Cozy room decor" />
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews">
+    <span class="eyebrow">Loved by Customers</span><h2>Kind words, happy homes 💬</h2>
+    <div class="review-grid">
+      <blockquote>★★★★★<p>“The pink quencher is exactly as pictured and came in 2 days. Obsessed!”</p><cite>— Amara</cite></blockquote>
+      <blockquote>★★★★★<p>“Ordered a birthday hamper with a note — my friend cried. Beautiful packaging. Paid when I collected it.”</p><cite>— Chidi</cite></blockquote>
+      <blockquote>★★★★★<p>“The lantern and lights transformed my room. Great quality for the price.”</p><cite>— Zara</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Get 10% off your first order 💌</h2>
+    <p>Join the Butterfly list for new drops, restocks and members-only offers.</p>
+    <form onsubmit="subscribe(event)"><input id="newsEmail" type="email" placeholder="Your email address" required><button class="btn primary">Subscribe</button></form>
+    <small id="newsMsg"></small>
+  </section>
+</main>
+
+<!-- ============ CHECKOUT VIEW ============ -->
+<main id="view-checkout" class="hidden">
+  <section class="section checkout-wrap">
+    <button class="back" onclick="showView('shop')">← Back to shop</button>
+    <h2>Checkout — Pay on Collect / Delivery 💖</h2>
+    <p style="color:#5a3d66;margin-bottom:18px"><b>No card required.</b> Place your order now, then pay when you collect your goods in town, or pay when admin delivers to you out of town.</p>
+    <div class="checkout-grid">
+      <form id="checkoutForm" onsubmit="placeOrder(event)">
+        <h3>1. Your Details</h3>
+        <!-- Honeypot: bots fill this; humans never see it -->
+        <input name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="two"><input name="firstName" placeholder="First name *" required><input name="lastName" placeholder="Last name *"></div>
+        <input name="phone" placeholder="Phone / WhatsApp *" required pattern="[0-9+ ]{7,20}" title="Enter a valid phone / WhatsApp number">
+        <input name="email" type="email" placeholder="Email *" required>
+        <h3 style="margin-top:22px">2. Collect or Delivery?</h3>
+        <div class="two">
+          <label class="radio"><input type="radio" name="delivery" value="pickup" checked> 🏬 Collect in Town <small style="font-weight:normal;color:#7a6a86">&nbsp;— Pay on collection</small></label>
+          <label class="radio"><input type="radio" name="delivery" value="delivery"> 🚚 Admin Delivery (Out of Town) <small style="font-weight:normal;color:#7a6a86">&nbsp;— Pay on delivery</small></label>
+        </div>
+        <input id="addressInput" name="address" placeholder="Delivery address (only if out of town — leave blank if collecting in town)">
+        <input name="city" placeholder="City / Area">
+        <textarea name="note" placeholder="Gift note (optional — we’ll include a free card 💌)"></textarea>
+        <h3 style="margin-top:22px">3. How You Will Pay</h3>
+        <div class="two">
+          <label class="radio"><input type="radio" name="payment" value="pay-on-collection" checked> 💵 Pay on Collection <small style="font-weight:normal;color:#7a6a86">&nbsp;In town</small></label>
+          <label class="radio"><input type="radio" name="payment" value="pay-on-delivery"> 💵 Pay on Delivery <small style="font-weight:normal;color:#7a6a86">&nbsp;Admin delivers</small></label>
+        </div>
+        <div class="pay-info">💖 <b>No online payment!</b> We will confirm your order by phone/WhatsApp. Please have your payment ready when you collect in town, or when admin delivers to you out of town. Total to pay: <b id="payInfoTotal">$0.00</b></div>
+        <button class="btn primary big" type="submit">Place My Order • <span id="payBtnTotal">$0.00</span> to Pay on Collect/Delivery</button>
+        <small style="display:block;text-align:center;margin-top:8px;color:#7a6a86">✅ No card details needed — this is pay-on-collection / pay-on-delivery only.</small>
+      </form>
+      <aside class="summary" id="checkoutSummary"></aside>
+    </div>
+  </section>
+</main>
+
+<!-- ============ TRACK VIEW ============ -->
+<main id="view-track" class="hidden">
+  <section class="section track-wrap">
+    <button class="back" onclick="showView('shop')">← Back to shop</button>
+    <h2>Track Your Order 📦</h2>
+    <p>Enter the Order ID from your confirmation (e.g. BB-XXXXXX).</p>
+    <form class="track-form" onsubmit="trackOrder(event)"><input id="trackInput" placeholder="BB-123456" required><button class="btn primary">Track</button></form>
+    <div id="trackResult"></div>
+    <h3 style="margin-top:32px">Your Recent Orders</h3>
+    <div id="myOrders"></div>
+  </section>
+</main>
+
+<!-- ============ SUCCESS VIEW ============ -->
+<main id="view-success" class="hidden">
+  <section class="section success-wrap">
+    <div class="success-icon">🦋🎉</div>
+    <h2>Order placed successfully!</h2>
+    <p>Thank you for shopping with Blissful Butterfly. <b>Remember: no online payment — pay when you collect in town, or pay when admin delivers to you.</b></p>
+    <div class="success-card" id="successCard"></div>
+    <div class="success-actions">
+      <button class="btn primary" onclick="showView('track')">Track Order</button>
+      <button class="btn ghost" onclick="showView('shop')">Continue Shopping</button>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-grid">
+    <div><div class="brand"><span class="brand-icon">🦋</span><span class="brand-text"><span>Blissful</span> Butterfly</span></div><p><b>FOR ALL YOUR GIRLY GIRLS ITEMS</b></p><p>Stanley cups, room decor &amp; gift hampers — curated with love. Pay on collection in town or on delivery out of town.</p><p>📞 +1 (555) 012-3456<br>📧 hello@blissfulbutterfly.shop<br>📍 Open Mon–Sat, 9am–7pm</p></div>
+    <div><h4>Shop</h4><a href="#shop" onclick="filterCat('stanley')">Stanley Cups</a><a href="#shop" onclick="filterCat('decor')">Room Decor</a><a href="#shop" onclick="filterCat('hampers')">Gift Hampers</a><a href="#" onclick="openAdminLogin();return false;" style="opacity:.65;font-size:13px">Admin</a></div>
+    <div><h4>Help</h4><a href="#" onclick="showView('track');return false;">Track Order</a><a href="#about">About Us</a><a href="#" onclick="toast('Returns within 7 days — contact us to start.')">Returns</a></div>
+    <div><h4>Follow Us</h4><a href="#" onclick="toast('Opening Instagram… @blissful.butterfly');return false;">Instagram</a><a href="#" onclick="toast('Opening TikTok… @blissful.butterfly');return false;">TikTok</a><a href="#" onclick="toast('Opening WhatsApp…');return false;">WhatsApp</a></div>
+  </div>
+  <p class="copyright">© 2026 Blissful Butterfly — FOR ALL YOUR GIRLY GIRLS ITEMS • Pay on Collection / Pay on Delivery • All rights reserved.</p>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay hidden" id="cartOverlay" onclick="toggleCart(false)"></div>
+<aside class="drawer hidden" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your Cart <span id="drawerCount"></span></h3><button class="icon-btn" onclick="toggleCart(false)">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="promo"><input id="promoInput" placeholder="Promo code (try BLISS10)"><button onclick="applyPromo()">Apply</button><small id="promoMsg"></small></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- Product Modal -->
+<div class="overlay hidden" id="modalOverlay" onclick="closeModal()"></div>
+<div class="modal hidden" id="productModal"></div>
+
+<div class="toast hidden" id="toast"></div>
+
+<!-- ============ ADMIN LOGIN (demo: admin / butterfly123) ============ -->
+<div class="overlay hidden" id="adminLoginOverlay" onclick="closeAdminLogin()">
+  <div class="admin-login-card" onclick="event.stopPropagation()">
+    <button class="icon-btn close-x" onclick="closeAdminLogin()">✕</button>
+    <div style="text-align:center;font-size:44px">🦋</div>
+    <h3 style="text-align:center;color:var(--pink-d);margin:6px 0">Admin Login</h3>
+    <p style="text-align:center;color:var(--muted);font-size:14px">Blissful Butterfly Admin Dashboard</p>
+    <form id="adminLoginForm" onsubmit="adminLogin(event)">
+      <input id="adminEmail" type="email" placeholder="Admin email" required autocomplete="username">
+      <input id="adminPass" type="password" placeholder="Password" required autocomplete="current-password">
+      <button class="btn primary big" type="submit">Login to Dashboard →</button>
+    </form>
+    <small id="adminLoginMsg" style="display:block;text-align:center;margin-top:10px;color:#c0392b"></small>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px">Supabase Auth: create your admin user in Supabase → Authentication → Users.<br>Demo (no keys yet): <b>admin</b> / <b>butterfly123</b></p>
+  </div>
+</div>
+
+<!-- ============ ADMIN DASHBOARD ============ -->
+<aside class="admin hidden" id="adminPanel">
+  <div class="admin-head">
+    <div><span class="brand-icon">🦋</span> <b>Blissful Butterfly</b> Admin</div>
+    <div><button class="btn ghost" onclick="window.print()">🖨️ Print</button>
+    <button class="btn primary" onclick="logoutAdmin()">Logout</button></div>
+  </div>
+  <div class="admin-tabs">
+    <button data-tab="dashboard" class="active" onclick="adminTab('dashboard')">📊 Dashboard</button>
+    <button data-tab="orders" onclick="adminTab('orders')">📦 Orders <span id="adminOrderBadge" class="badge">0</span></button>
+    <button data-tab="products" onclick="adminTab('products')">🥤 Products &amp; Stock</button>
+    <button data-tab="customers" onclick="adminTab('customers')">👩 Customers</button>
+    <button data-tab="settings" onclick="adminTab('settings')">⚙️ Settings</button>
+    <button onclick="document.getElementById('adminPanel').classList.add('hidden')">← Back to Shop</button>
+  </div>
+  <div class="admin-body" id="adminBody"></div>
+</aside>
+
+<script src="assets/catalogue.js"></script>
+<script src="assets/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="assets/backend.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>
